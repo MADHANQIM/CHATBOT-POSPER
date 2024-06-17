@@ -1,0 +1,164 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Menentukan z-index untuk menangani lapisan tumpukan */
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    margin-left: 20px;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Menentukan z-index untuk menangani lapisan tumpukan */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li :hover{
+    color: aqua;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 960px;
+    padding: 0 20px;
+}
+
+section {
+    flex: 2;
+}
+
+.PORTOFOLIO {
+    margin-top: 0px;
+    padding: 60px;
+    background-color: var(--primary-color);
+}
+
+.PORTOFOLIO-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, auto));
+    margin-left: 70px;
+    gap: 2.5rem;
+    margin-top: 5rem;
+} 
+
+.PORTOFOLIO p{
+    display: inline-block;
+    margin-left: 70px;
+    color: var(--primary-theme-color);
+}
+.PORTOFOLIO h5{
+    margin-left: 70px;
+}
+.PORTOFOLIO h2{
+    text-align:center;
+    color: var(--primary-white);
+}
+.row{
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.row img{
+    height: 500px;
+    width: 500px;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    margin-bottom: 20px;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    header h1 {
+        margin-left: 10px;
+        font-size: 1.8rem;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+        font-size: 0.9rem;
+    }
+
+    .PORTOFOLIO-content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        margin-top: 3rem;
+    }
+
+    .PORTOFOLIO h2 {
+        font-size: 1.5rem;
+    }
+
+    .row img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        margin-left: 5px;
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        margin-right: 5px;
+        font-size: 0.8rem;
+    }
+
+    .PORTOFOLIO {
+        padding: 40px;
+    }
+
+    .PORTOFOLIO-content {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        margin-top: 2rem;
+    }
+
+    .PORTOFOLIO h2 {
+        font-size: 1.2rem;
+    }
+}
